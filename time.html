@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Time Converter</title>
+	<meta name="description" content="Free online time converter - converts between 34 units of time, including second [s], millisecond [ms], minute [min], hour [h], etc. Also, explore many other unit converters or learn more about time unit conversions." />
+	<link rel="stylesheet" href="//d15gdne58bo42a.cloudfront.net/style-n.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="//d15gdne58bo42a.cloudfront.net/js/common.js" async></script>
+</head>
+<body>
+<div id="unquickcalc" style="display:none;"></div>
+
+<div id="ucresult" class="ucresulttext"></div>
+<form>
+<table id="uctable">
+	<tr>
+		<td class="uccell"><label for="ucfrom">From:</label><br><input type="text" name="ucfrom" class="ucinput" id="ucfrom" onKeyUp="ucUpdateResult();" autofocus></td>
+		<td class="uccell"><label for="ucto">To:</label><br><input type="text" name="ucto" class="ucinput" id="ucto" style="background-color:#eeeeee;" readonly></td>
+	</tr>
+	<tr>
+		<td class="uccell">
+			<select name="ucfromunit" id="ucfromunit" size="15" onChange="ucUpdateResult();" class="ucselect"><option value="second [s] [3.1536E+18]" selected>second [s]</option><option value="millisecond [ms] [3.1536E+21]">millisecond [ms]</option><option value="minute [min] [5.256E+16]">minute [min]</option><option value="hour [h] [8.76E+14]">hour [h]</option><option value="day [d] [36500000000000]">day [d]</option><option value="week [5214285714285.7]">week</option><option value="month [1200000000000]">month</option><option value="year [y] [99931553730.322]">year [y]</option><option value="decade [9993155373.0322]">decade</option><option value="century [999315537.30322]">century</option><option value="millennium [99931553.730322]">millennium</option><option value="microsecond [&#181;s] [3.1536E+24]">microsecond [&#181;s]</option><option value="nanosecond [ns] [3.1536E+27]">nanosecond [ns]</option><option value="picosecond [ps] [3.1536E+30]">picosecond [ps]</option><option value="femtosecond [fs] [3.1536E+33]">femtosecond [fs]</option><option value="attosecond [as] [3.1536E+36]">attosecond [as]</option><option value="shake [3.1536E+26]">shake</option><option value="month (synodic) [1236006041191.2]">month (synodic)</option><option value="year (Julian) [99931553730.322]">year (Julian)</option><option value="year (leap) [99726775956.284]">year (leap)</option><option value="year (tropical) [99933675424.067]">year (tropical)</option><option value="year (sidereal) [99929813565.361]">year (sidereal)</option><option value="day (sidereal) [36599933916786]">day (sidereal)</option><option value="hour (sidereal) [8.7839841400286E+14]">hour (sidereal)</option><option value="minute (sidereal) [5.2703904840172E+16]">minute (sidereal)</option><option value="second (sidereal) [3.1622342904103E+18]">second (sidereal)</option><option value="fortnight [2607142857142.9]">fortnight</option><option value="septennial [14285714285.714]">septennial</option><option value="octennial [12500000000]">octennial</option><option value="novennial [11111111111.111]">novennial</option><option value="quindecennial [6666666666.6667]">quindecennial</option><option value="quinquennial [20000000000]">quinquennial</option><option value="Planck time [5.8502270636075E+61]">Planck time</option></select>
+		</td>
+		<td class="uccell">
+			<select name="uctounit" id="uctounit" size="15" onChange="ucUpdateResult();" class="ucselect"><option value="second [s] [3.1536E+18]">second [s]</option><option value="millisecond [ms] [3.1536E+21]" selected>millisecond [ms]</option><option value="minute [min] [5.256E+16]">minute [min]</option><option value="hour [h] [8.76E+14]">hour [h]</option><option value="day [d] [36500000000000]">day [d]</option><option value="week [5214285714285.7]">week</option><option value="month [1200000000000]">month</option><option value="year [y] [99931553730.322]">year [y]</option><option value="decade [9993155373.0322]">decade</option><option value="century [999315537.30322]">century</option><option value="millennium [99931553.730322]">millennium</option><option value="microsecond [&#181;s] [3.1536E+24]">microsecond [&#181;s]</option><option value="nanosecond [ns] [3.1536E+27]">nanosecond [ns]</option><option value="picosecond [ps] [3.1536E+30]">picosecond [ps]</option><option value="femtosecond [fs] [3.1536E+33]">femtosecond [fs]</option><option value="attosecond [as] [3.1536E+36]">attosecond [as]</option><option value="shake [3.1536E+26]">shake</option><option value="month (synodic) [1236006041191.2]">month (synodic)</option><option value="year (Julian) [99931553730.322]">year (Julian)</option><option value="year (leap) [99726775956.284]">year (leap)</option><option value="year (tropical) [99933675424.067]">year (tropical)</option><option value="year (sidereal) [99929813565.361]">year (sidereal)</option><option value="day (sidereal) [36599933916786]">day (sidereal)</option><option value="hour (sidereal) [8.7839841400286E+14]">hour (sidereal)</option><option value="minute (sidereal) [5.2703904840172E+16]">minute (sidereal)</option><option value="second (sidereal) [3.1622342904103E+18]">second (sidereal)</option><option value="fortnight [2607142857142.9]">fortnight</option><option value="septennial [14285714285.714]">septennial</option><option value="octennial [12500000000]">octennial</option><option value="novennial [11111111111.111]">novennial</option><option value="quindecennial [6666666666.6667]">quindecennial</option><option value="quinquennial [20000000000]">quinquennial</option><option value="Planck time [5.8502270636075E+61]">Planck time</option></select>
+		</td>
+	</tr>
+</table>
+</form>
+<script>noValidation=0;</script></body>
+</html>

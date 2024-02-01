@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Temperature Converter</title>
+	<meta name="description" content="Free online temperature converter - converts between 6 units of temperature, including kelvin [K], Celsius [&#176;C], Fahrenheit [&#176;F], Rankine [&#176;R], etc. Also, explore many other unit converters or learn more about temperature unit conversions." />
+	<link rel="stylesheet" href="//d15gdne58bo42a.cloudfront.net/style-n.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="//d15gdne58bo42a.cloudfront.net/js/common.js" async></script>
+</head>
+<body>
+<div id="unquickcalc" style="display:none;"></div>
+
+<div id="ucresult" class="ucresulttext"></div>
+<form>
+<table id="uctable">
+	<tr>
+		<td class="uccell"><label for="ucfrom">From:</label><br><input type="text" name="ucfrom" class="ucinput" id="ucfrom" onKeyUp="ucUpdateResult();" autofocus></td>
+		<td class="uccell"><label for="ucto">To:</label><br><input type="text" name="ucto" class="ucinput" id="ucto" style="background-color:#eeeeee;" readonly></td>
+	</tr>
+	<tr>
+		<td class="uccell">
+			<select name="ucfromunit" id="ucfromunit" size="6" onChange="ucUpdateResult();" class="ucselect"><option value="kelvin [K] [2:1:0]" selected>kelvin [K]</option><option value="Celsius [&#176;C] [2:-272.15:-273.15]">Celsius [&#176;C]</option><option value="Fahrenheit [&#176;F] [2:-457.87:-459.67]">Fahrenheit [&#176;F]</option><option value="Rankine [&#176;R] [2:1.8:0]">Rankine [&#176;R]</option><option value="Reaumur [&#176;r] [2:-217.72:-218.52]">Reaumur [&#176;r]</option><option value="Triple point of water [2:0.0036608581051398:0]">Triple point of water</option></select>
+		</td>
+		<td class="uccell">
+			<select name="uctounit" id="uctounit" size="6" onChange="ucUpdateResult();" class="ucselect"><option value="kelvin [K] [2:1:0]">kelvin [K]</option><option value="Celsius [&#176;C] [2:-272.15:-273.15]" selected>Celsius [&#176;C]</option><option value="Fahrenheit [&#176;F] [2:-457.87:-459.67]">Fahrenheit [&#176;F]</option><option value="Rankine [&#176;R] [2:1.8:0]">Rankine [&#176;R]</option><option value="Reaumur [&#176;r] [2:-217.72:-218.52]">Reaumur [&#176;r]</option><option value="Triple point of water [2:0.0036608581051398:0]">Triple point of water</option></select>
+		</td>
+	</tr>
+</table>
+</form>
+<script>noValidation=0;</script></body>
+</html>
